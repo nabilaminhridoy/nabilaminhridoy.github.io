@@ -117,8 +117,7 @@ section .title::after{
     display: inline-block;
 }
 .navbar .menu li a{
-	position: fixed;
-    display: block;
+	display: block;
     color: black;
     font-size: 20px;
     font-weight: 500;
