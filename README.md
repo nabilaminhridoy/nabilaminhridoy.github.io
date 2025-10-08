@@ -66,7 +66,7 @@ Passionate MERN Stack & Full Stack Developer focused on creating modern web appl
 git clone https://github.com/nabilaminhridoy/nabilaminhridoy.github.io.git
 
 # Navigate to project
-cd nabilaminhridoy-portfoliov2
+cd nabilaminhridoy.github.io
 
 # Install dependencies
 npm install
