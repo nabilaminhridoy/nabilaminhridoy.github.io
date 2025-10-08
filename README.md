@@ -1,6 +1,5 @@
-<div align="center"><h1>Nabil Amin Hridoy</h1></div>
-
 <div align="center">
+  <h1>Nabil Amin Hridoy</h1>
   <h3>Full Stack Developer | MERN Stack Expert</h3>
   <p>Building scalable, user-friendly, and high-performance web applications</p>
 </div>
