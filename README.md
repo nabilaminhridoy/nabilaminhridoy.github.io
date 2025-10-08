@@ -1,4 +1,4 @@
-# <p align="center">Nabil Amin Hridoy</p>
+# <div align="center">Nabil Amin Hridoy
 
 <div align="center">
   <h3>Full Stack Developer | MERN Stack Expert</h3>
@@ -196,5 +196,5 @@ Built with passion and dedication to showcase modern web development capabilitie
 
 
 <div align="center">
-<p>Developed with ❤️ by Nabil Amin Hridoy</p>
-<p><em>Full Stack Developer | MERN Stack Expert
+<p>Developed with ❤️ by <a href="https://github.com/nabilaminhridoy" target="_blank">Nabil Amin Hridoy</a></p>
+<p><em>Full Stack Developer | MERN Stack Expert | Tech Enthusiast
