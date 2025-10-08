@@ -33,23 +33,33 @@ export default function Portfolio() {
     setIsMenuOpen(false)
   }
 
+  const contactFormRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    // Ensure contact form is isolated from any parent click handlers
+    const contactForm = contactFormRef.current
+    if (contactForm) {
+      const handleGlobalClick = (e: Event) => {
+        if (contactForm.contains(e.target as Node)) {
+          e.stopPropagation()
+          e.stopImmediatePropagation()
+        }
+      }
+      
+      document.addEventListener('click', handleGlobalClick, true)
+      
+      return () => {
+        document.removeEventListener('click', handleGlobalClick, true)
+      }
+    }
+  }, [])
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    e.stopPropagation()
     const { name, value } = e.target
     setFormData(prev => ({
       ...prev,
       [name]: value
     }))
-  }
-
-  const handleInputClick = (e: React.MouseEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    e.stopPropagation()
-    e.nativeEvent.stopImmediatePropagation()
-  }
-
-  const handleInputFocus = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    e.stopPropagation()
-    e.nativeEvent.stopImmediatePropagation()
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -686,16 +696,16 @@ export default function Portfolio() {
               </div>
             </motion.div>
 
-            <motion.div variants={scaleIn} onClick={(e) => e.stopPropagation()} onMouseDown={(e) => e.stopPropagation()}>
-              <Card className="hover:shadow-lg transition-shadow" onClick={(e) => e.stopPropagation()} onMouseDown={(e) => e.stopPropagation()}>
+            <motion.div variants={scaleIn} ref={contactFormRef}>
+              <Card className="hover:shadow-lg transition-shadow">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     Send Message
                   </CardTitle>
                   <CardDescription>Fill out the form below and I'll get back to you as soon as possible.</CardDescription>
                 </CardHeader>
-                <CardContent onClick={(e) => e.stopPropagation()} onMouseDown={(e) => e.stopPropagation()}>
-                  <form className="space-y-4" onSubmit={handleSubmit} onClick={(e) => e.stopPropagation()} onMouseDown={(e) => e.stopPropagation()}>
+                <CardContent>
+                  <form className="space-y-4" onSubmit={handleSubmit}>
                     <div>
                       <Label htmlFor="name" className="flex items-center gap-2 mb-[5px]">
                         Name
@@ -705,9 +715,6 @@ export default function Portfolio() {
                         name="name"
                         value={formData.name}
                         onChange={handleInputChange}
-                        onClick={handleInputClick}
-                        onFocus={handleInputFocus}
-                        onMouseDown={handleInputClick}
                         placeholder="Your Name" 
                         required 
                       />
@@ -722,9 +729,6 @@ export default function Portfolio() {
                         type="email" 
                         value={formData.email}
                         onChange={handleInputChange}
-                        onClick={handleInputClick}
-                        onFocus={handleInputFocus}
-                        onMouseDown={handleInputClick}
                         placeholder="your@email.com" 
                         required 
                       />
@@ -738,15 +742,16 @@ export default function Portfolio() {
                         name="message"
                         value={formData.message}
                         onChange={handleInputChange}
-                        onClick={handleInputClick}
-                        onFocus={handleInputFocus}
-                        onMouseDown={handleInputClick}
                         placeholder="Your message here..." 
                         rows={4} 
                         required 
                       />
                     </div>
-                    <Button type="submit" className="w-full gradient-logo hover:opacity-90 transition-opacity" disabled={isSubmitting}>
+                    <Button 
+                      type="submit" 
+                      className="w-full gradient-logo hover:opacity-90 transition-opacity" 
+                      disabled={isSubmitting}
+                    >
                       <i className="fas fa-paper-plane mr-2"></i>
                       {isSubmitting ? 'Sending...' : 'Send Message'}
                     </Button>
