@@ -1,4 +1,4 @@
-# <div align="center"> Nabil Amin Hridoy </div>
+# <p align="center">Nabil Amin Hridoy</p>
 
 <div align="center">
   <h3>Full Stack Developer | MERN Stack Expert</h3>
