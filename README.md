@@ -1,88 +1,69 @@
-# 🚀 Nabil Amin Hridoy - Portfolio Website
+# <div align="center"> Nabil Amin Hridoy </div>
 
-A modern, responsive portfolio website built with Next.js 15, TypeScript, and Tailwind CSS. This project showcases my skills as a Full Stack Developer with expertise in MERN stack technologies.
+<div align="center">
+  <h3>Full Stack Developer | MERN Stack Expert</h3>
+  <p>Building scalable, user-friendly, and high-performance web applications</p>
+</div>
 
-## ✨ About Me
 
-I'm **Nabil Amin Hridoy**, a passionate MERN Stack & Full Stack Developer focused on building scalable, user-friendly, and high-performance web applications with modern technologies and best practices.
+## 🚀 About Me
 
-### 🎯 Core Skills
-- **Frontend**: React.js, Next.js, TypeScript, Tailwind CSS
-- **Backend**: Node.js, Express.js, REST APIs, GraphQL
-- **Database**: MongoDB, PostgreSQL, Prisma ORM
-- **Tools**: Git, Docker, AWS, CI/CD
-- **Other**: Socket.io, Redis, NextAuth.js
+Passionate MERN Stack & Full Stack Developer focused on creating modern web applications with cutting-edge technologies. I transform ideas into robust, scalable solutions with clean code and best practices.
 
-## 🌟 Features
+## 🛠️ Tech Stack
 
-### 🎨 Modern Design
-- **Responsive Layout**: Mobile-first design with smooth animations
-- **Dark/Light Theme**: Beautiful theme switching with Next Themes
-- **Interactive Elements**: Smooth micro-interactions with Framer Motion
-- **Professional UI**: Clean, modern interface using shadcn/ui components
+### Frontend
+![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)
 
-### 📝 Contact Form
-- **Functional Contact**: Working contact form with SMTP email integration
-- **Email Notifications**: Professional email templates with dynamic content
-- **Form Validation**: Client-side and server-side validation
-- **User Feedback**: Toast notifications for better UX
+### Backend
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
+![Express.js](https://img.shields.io/badge/Express.js-000000?style=flat-square&logo=express&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=flat-square&logo=postgresql&logoColor=white)
 
-### 🎯 Portfolio Sections
-- **Hero Section**: Eye-catching introduction with call-to-action buttons
-- **About Me**: Professional overview with social media links
-- **Featured Projects**: Showcase of best work with project details
-- **Experience Timeline**: Work and education history
-- **Testimonials**: Client feedback and recommendations
-- **Contact Information**: Multiple ways to get in touch
+### Tools & Others
+![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazon-aws&logoColor=white)
+![Socket.io](https://img.shields.io/badge/Socket.io-010101?style=flat-square&logo=socketdotio&logoColor=white)
 
-### 🛠️ Technical Features
-- **Type Safety**: Full TypeScript implementation
-- **SEO Optimized**: Meta tags and structured data
-- **Performance**: Optimized images and lazy loading
-- **Accessibility**: Semantic HTML and ARIA support
-- **Progressive Web App**: PWA capabilities
 
-## 🚀 Technology Stack
+## 🌟 Portfolio Features
 
-### 🎯 Core Framework
-- **⚡ Next.js 15** - React framework with App Router
-- **📘 TypeScript 5** - Type-safe development
-- **🎨 Tailwind CSS 4** - Utility-first CSS framework
+### Design & UX
+- **Responsive Design** - Mobile-first approach with smooth animations
+- **Dark/Light Theme** - Beautiful theme switching
+- **Modern UI** - Clean interface with shadcn/ui components
+- **Micro-interactions** - Smooth transitions and hover effects
 
-### 🧩 UI & Design
-- **🧩 shadcn/ui** - High-quality accessible components
-- **🎯 Lucide React** - Beautiful icon library
-- **🌈 Framer Motion** - Smooth animations
-- **🎨 Next Themes** - Theme switching
+### Functionality
+- **Contact Form** - Working SMTP email integration
+- **Project Showcase** - Interactive portfolio with detailed views
+- **Experience Timeline** - Professional history presentation
+- **Social Links** - Connected social media profiles
 
-### 📋 Backend & API
-- **📧 Nodemailer** - SMTP email functionality
-- **🔐 Input Validation** - Form security and validation
-- **🌐 REST API** - Contact form endpoint
+### Technical Features
+- **Type Safety** - Full TypeScript implementation
+- **SEO Optimized** - Meta tags and structured data
+- **Performance** - Optimized images and lazy loading
+- **PWA Ready** - Progressive Web App capabilities
 
-### 🎨 UI Components
-- **Layout**: Cards, sections, responsive grid
-- **Forms**: Input fields, textarea, validation
-- **Feedback**: Toast notifications, loading states
-- **Navigation**: Smooth scrolling, mobile menu
 
 ## 📱 Live Demo
 
-Visit my portfolio at: [Your Portfolio URL]
+**🌐 [nabilaminhridoy.vercel.app](https://nabilaminhridoy.vercel.app)**
 
-## 🛠️ Installation & Setup
 
-### Prerequisites
-- Node.js 18+ 
-- npm or yarn
-
-### Clone and Run
+## 🛠️ Installation
 
 ```bash
 # Clone the repository
-git clone https://github.com/nabilaminhridoy/nabilaminhridoy-portfoliov2.git
+git clone https://github.com/nabilaminhridoy/nabilaminhridoy.github.io.git
 
-# Navigate to project directory
+# Navigate to project
 cd nabilaminhridoy-portfoliov2
 
 # Install dependencies
@@ -193,6 +174,10 @@ docker build -t portfolio .
 docker run -p 3000:3000 portfolio
 ```
 
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
 ## 🤝 Connect With Me
 
 <p align="left">
@@ -205,16 +190,11 @@ docker run -p 3000:3000 portfolio
   <a href="mailto:nabilaminhridoy@gmail.com" target="blank"><img align="center" src="https://img.icons8.com/fluency/48/000000/gmail.png" alt="Email" height="40" width="40" /></a>
 </p>
 
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
 ## 🙏 Acknowledgments
 
 Built with passion and dedication to showcase modern web development capabilities. Special thanks to the open-source community for the amazing tools and libraries that made this project possible.
 
----
 
-**Developed with ❤️ by Nabil Amin Hridoy**
-
-*Full Stack Developer | MERN Stack Expert | Tech Enthusiast*
+<div align="center">
+<p>Developed with ❤️ by Nabil Amin Hridoy</p>
+<p><em>Full Stack Developer | MERN Stack Expert
