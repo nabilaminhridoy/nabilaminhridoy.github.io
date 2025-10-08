@@ -195,11 +195,29 @@ docker run -p 3000:3000 portfolio
 
 ## 🤝 Connect With Me
 
-- **Portfolio**: [Your Portfolio URL]
-- **GitHub**: [https://github.com/nabilaminhridoy](https://github.com/nabilaminhridoy)
-- **LinkedIn**: [https://linkedin.com/in/nabilaminhridoy](https://linkedin.com/in/nabilaminhridoy)
-- **Email**: nabilaminhridoy@gmail.com
-- **WhatsApp**: +880 1624-647814
+<p align="left">
+  <a href="https://nabilaminhridoy.vercel.app" target="blank">
+    <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="Portfolio" height="30" width="40" />
+  </a>
+  <a href="https://facebook.com/nabilaminhridoy" target="blank">
+    <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="Facebook" height="30" width="40" />
+  </a>
+  <a href="https://instagram.com/nabilaminhridoy" target="blank">
+    <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="Instagram" height="30" width="40" />
+  </a>
+  <a href="https://wa.me/8801624647814" target="blank">
+    <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/whatsapp.svg" alt="WhatsApp" height="30" width="40" />
+  </a>
+  <a href="https://github.com/nabilaminhridoy" target="blank">
+    <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/github.svg" alt="GitHub" height="30" width="40" />
+  </a>
+  <a href="https://linkedin.com/in/nabilaminhridoy" target="blank">
+    <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="LinkedIn" height="30" width="40" />
+  </a>
+  <a href="mailto:nabilaminhridoy@gmail.com" target="blank">
+    <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/gmail.svg" alt="Email" height="30" width="40" />
+  </a>
+</p>
 
 ## 📄 License
 
