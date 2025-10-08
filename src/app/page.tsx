@@ -42,6 +42,16 @@ export default function Portfolio() {
     }))
   }
 
+  const handleInputClick = (e: React.MouseEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    e.stopPropagation()
+    e.nativeEvent.stopImmediatePropagation()
+  }
+
+  const handleInputFocus = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    e.stopPropagation()
+    e.nativeEvent.stopImmediatePropagation()
+  }
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
@@ -267,7 +277,7 @@ export default function Portfolio() {
     <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
       {/* Live Background */}
       <div className="fixed inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 animate-pulse"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#175BEA]/10 via-[#00C5FB]/10 to-[#175BEA]/5 animate-pulse"></div>
         <div className="absolute inset-0">
           {[...Array(50)].map((_, i) => (
             <div
@@ -291,7 +301,13 @@ export default function Portfolio() {
       <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md z-50 border-b">
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
-            <div className="text-2xl font-bold font-heading">NH</div>
+            <div className="flex items-center">
+              <img 
+                src="/logo.png" 
+                alt="Nabil Amin Hridoy" 
+                className="w-8 h-8 rounded-full"
+              />
+            </div>
             
             {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-8">
@@ -299,7 +315,7 @@ export default function Portfolio() {
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}
-                  className="capitalize hover:text-primary transition-colors font-medium font-heading"
+                  className="capitalize hover:text-[#07a6f6] transition-colors font-medium font-heading"
                 >
                   {section}
                 </button>
@@ -311,6 +327,7 @@ export default function Portfolio() {
                 variant="ghost"
                 size="icon"
                 onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                className="hover:bg-gradient-to-r hover:from-[#175BEA]/10 hover:to-[#00C5FB]/10 hover:text-[#175BEA] transition-all duration-300"
               >
                 <i className={`fas ${theme === 'dark' ? 'fa-sun' : 'fa-moon'} text-lg`}></i>
               </Button>
@@ -334,7 +351,7 @@ export default function Portfolio() {
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}
-                  className="block w-full text-left capitalize py-2 hover:text-primary transition-colors font-medium font-heading"
+                  className="block w-full text-left capitalize py-2 hover:text-[#07a6f6] transition-colors font-medium font-heading"
                 >
                   {section}
                 </button>
@@ -354,7 +371,7 @@ export default function Portfolio() {
             variants={staggerContainer}
           >
             <motion.h1 
-              className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent font-heading"
+              className="text-4xl md:text-6xl font-bold mb-6 gradient-logo-text font-heading"
               variants={fadeInUp}
             >
               Hi, I'm Nabil Amin Hridoy
@@ -375,7 +392,7 @@ export default function Portfolio() {
               className="flex flex-col sm:flex-row gap-4 justify-center"
               variants={fadeInUp}
             >
-              <Button size="lg" onClick={() => scrollToSection('contact')} className="text-lg px-8">
+              <Button size="lg" onClick={() => scrollToSection('contact')} className="text-lg px-8 gradient-logo hover:opacity-90 transition-opacity">
                 <i className="fas fa-envelope mr-2"></i>
                 Hire Me
               </Button>
@@ -438,7 +455,7 @@ export default function Portfolio() {
                       </div>
                       <div className="w-full bg-secondary rounded-full h-2">
                         <div 
-                          className="bg-primary h-2 rounded-full transition-all duration-1000 ease-out"
+                          className="gradient-logo h-2 rounded-full transition-all duration-1000 ease-out"
                           style={{ width: `${skill.level}%` }}
                         />
                       </div>
@@ -536,7 +553,7 @@ export default function Portfolio() {
                             {exp.period}
                           </Badge>
                         </div>
-                        <CardDescription className="text-primary font-medium">
+                        <CardDescription className="text-[#07a6f6] font-medium">
                           {exp.company}
                         </CardDescription>
                         {(exp.gpa || exp.cgpa) && (
@@ -631,11 +648,21 @@ export default function Portfolio() {
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
                   <i className="fas fa-envelope text-primary text-lg"></i>
-                  <span>nabilaminhridoy@gmail.com</span>
+                  <a 
+                    href="mailto:nabilaminhridoy@gmail.com" 
+                    className="text-foreground hover:text-[#07a6f6] transition-colors"
+                  >
+                    nabilaminhridoy@gmail.com
+                  </a>
                 </div>
                 <div className="flex items-center gap-3">
                   <i className="fas fa-phone text-primary text-lg"></i>
-                  <span>+880 1624-647814</span>
+                  <a 
+                    href="tel:+8801624647814" 
+                    className="text-foreground hover:text-[#07a6f6] transition-colors"
+                  >
+                    +880 1624-647814
+                  </a>
                 </div>
                 <div className="flex items-center gap-3">
                   <i className="fas fa-map-marker-alt text-primary text-lg"></i>
@@ -659,16 +686,16 @@ export default function Portfolio() {
               </div>
             </motion.div>
 
-            <motion.div variants={scaleIn}>
-              <Card className="hover:shadow-lg transition-shadow">
+            <motion.div variants={scaleIn} onClick={(e) => e.stopPropagation()} onMouseDown={(e) => e.stopPropagation()}>
+              <Card className="hover:shadow-lg transition-shadow" onClick={(e) => e.stopPropagation()} onMouseDown={(e) => e.stopPropagation()}>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     Send Message
                   </CardTitle>
                   <CardDescription>Fill out the form below and I'll get back to you as soon as possible.</CardDescription>
                 </CardHeader>
-                <CardContent>
-                  <form className="space-y-4" onSubmit={handleSubmit} onClick={(e) => e.stopPropagation()}>
+                <CardContent onClick={(e) => e.stopPropagation()} onMouseDown={(e) => e.stopPropagation()}>
+                  <form className="space-y-4" onSubmit={handleSubmit} onClick={(e) => e.stopPropagation()} onMouseDown={(e) => e.stopPropagation()}>
                     <div>
                       <Label htmlFor="name" className="flex items-center gap-2 mb-[5px]">
                         Name
@@ -678,8 +705,9 @@ export default function Portfolio() {
                         name="name"
                         value={formData.name}
                         onChange={handleInputChange}
-                        onClick={(e) => e.stopPropagation()}
-                        onFocus={(e) => e.stopPropagation()}
+                        onClick={handleInputClick}
+                        onFocus={handleInputFocus}
+                        onMouseDown={handleInputClick}
                         placeholder="Your Name" 
                         required 
                       />
@@ -694,8 +722,9 @@ export default function Portfolio() {
                         type="email" 
                         value={formData.email}
                         onChange={handleInputChange}
-                        onClick={(e) => e.stopPropagation()}
-                        onFocus={(e) => e.stopPropagation()}
+                        onClick={handleInputClick}
+                        onFocus={handleInputFocus}
+                        onMouseDown={handleInputClick}
                         placeholder="your@email.com" 
                         required 
                       />
@@ -709,14 +738,15 @@ export default function Portfolio() {
                         name="message"
                         value={formData.message}
                         onChange={handleInputChange}
-                        onClick={(e) => e.stopPropagation()}
-                        onFocus={(e) => e.stopPropagation()}
+                        onClick={handleInputClick}
+                        onFocus={handleInputFocus}
+                        onMouseDown={handleInputClick}
                         placeholder="Your message here..." 
                         rows={4} 
                         required 
                       />
                     </div>
-                    <Button type="submit" className="w-full" disabled={isSubmitting}>
+                    <Button type="submit" className="w-full gradient-logo hover:opacity-90 transition-opacity" disabled={isSubmitting}>
                       <i className="fas fa-paper-plane mr-2"></i>
                       {isSubmitting ? 'Sending...' : 'Send Message'}
                     </Button>

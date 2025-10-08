@@ -27,6 +27,15 @@ export const metadata: Metadata = {
   description: "Full-stack MERN developer specializing in scalable web applications, React, Node.js, and modern web technologies.",
   keywords: ["MERN Stack", "Full Stack Developer", "React", "Node.js", "MongoDB", "Express.js", "TypeScript", "Web Development"],
   authors: [{ name: "Nabil Amin Hridoy" }],
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/icon-192.png",
+  },
   openGraph: {
     title: "Nabil Amin Hridoy - MERN Stack Developer",
     description: "Full-stack developer building scalable web applications with modern technologies",
